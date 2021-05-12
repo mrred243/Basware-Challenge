@@ -3,6 +3,15 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
 
+/* Variables */
+
+$lightGrey : #0000001F;
+$darkGrey : #00000099;
+$blue : #00A9CE;
+$greyBg : #0000000A;
+$red: #F44336;
+
+
 
 .mat-form-field-appearance-legacy {
     margin: 100px;
@@ -10,16 +19,16 @@ body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
     width: auto;
 
     .mat-input-element{
-        border: solid 1px #0000001F;
+        border: solid 1px $lightGrey;
         width: 300px;
         padding: 8px 12px;
         border-radius: 4px;
         margin: 4px 0px;
         &:hover{
-            border: solid 1px #00000099;
+            border: solid 1px $darkGrey;
         }
         &:focus{
-            border: solid 1px #00A9CE;
+            border: solid 1px $blue;
         }
     }
     .mat-form-field-underline{
@@ -27,17 +36,17 @@ body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
     }
     mat-label{
         font-weight: bold;
-        color: #00000099;
+        color: $darkGrey;
         font-size: 1rem;
     }
     .disabled{
-        background-color: #0000000A;
+        background-color: $greyBg;
         &:hover{
-            border: solid 1px #0000001F;
+            border: solid 1px $lightGrey;
         }
     }
     .readonly{
-        background-color: #0000000A;
+        background-color: $greyBg;
         border: none;
         color: black;
         &:hover{
@@ -51,7 +60,7 @@ body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
 
 .mat-form-field.mat-focused{
     mat-label{
-        color:#00A9CE
+        color: $blue;
     }
 }
 
@@ -61,7 +70,7 @@ body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
 
 .mat-form-field-invalid {
     mat-label{
-        color: #00000099;
+        color: $darkGrey;
     }
 }
 
@@ -73,6 +82,6 @@ body { margin: 0; font-family: "Helvetica Neue", sans-serif;}
 
 
 .error-message{
-    color: #F44336;
+    color: $red;
     font-size: 10px;
 }
